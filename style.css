@@ -1,0 +1,54 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+}
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;;
+    margin-bottom: 0px;;
+    display: block;
+}
+
+.sliderBoxContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align sliders to the bottom of the container */
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px; /* Add some padding to separate sliders from the bottom edge */
+}
+
+.sliderBox {
+    display: flex;
+    flex-wrap:wrap; /* Prevent sliders from wrapping */
+    justify-content: center;
+    align-items: flex-end; /* Align sliders to the bottom of the container */
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add some space between sliders */
+}
+
+.sliderContainer:last-child {
+    margin-right: 0; /* Remove margin from the last slider to prevent extra space */
+}
+
+.sliderContainer label {
+    margin-right: 10px;
+}
+
+.sliderContainer input[type="range"] {
+    width: 200px;
+}
+
+.sliderBoxContainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
