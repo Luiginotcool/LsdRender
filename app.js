@@ -92,15 +92,12 @@ Game.init = function() {
     Game.fov = 90
     Game.camera = new Camera(0,0,0,Game.fov * Math.PI/180, 0, 0);
 
-    console.log(Geometry.getRotationMatrix(Game.camera.theta, Game.camera.phi));
-
     Geometry.triArray.push(...Geometry.cube.toTriArray());
 }
 
 Game.update = function(dt) {
     Game.player.update();
     Game.camera.pos = new Vec3(Game.player.pos.x, 0, -Game.player.pos.y);
-    console.log(Input.mouseX)
     if (document.pointerLockElement === canvas) {
         if (Input.mouseX) {
             Game.camera.theta += Input.mouseX * App.mouseSensitivity;
