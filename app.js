@@ -113,7 +113,7 @@ Game.update = function(dt) {
 
 Game.draw = function() {
     Graphics.background("#776065");
-    Graphics.drawTopDown();
+    //Graphics.drawTopDown();
 
     Geometry.triArray.forEach(tri => {
         Render.renderTri(Game.camera, tri);
